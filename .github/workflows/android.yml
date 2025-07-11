@@ -35,6 +35,11 @@ jobs:
       - name: Build
         working-directory: ActionOpenDocument
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ActionOpenDocument-build
+          path: ActionOpenDocument/app/build/outputs/
 
   ActionOpenDocumentTree:
     name: ActionOpenDocumentTree
@@ -49,6 +54,11 @@ jobs:
       - name: Build
         working-directory: ActionOpenDocumentTree
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ActionOpenDocumentTree-build
+          path: ActionOpenDocumentTree/app/build/outputs/
 
   ContentProviderPaging:
     name: ContentProviderPaging
@@ -63,6 +73,11 @@ jobs:
       - name: Build
         working-directory: ContentProviderPaging
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ContentProviderPaging-build
+          path: ContentProviderPaging/app/build/outputs/
 
   ContentProviderPagingKotlin:
     name: ContentProviderPagingKotlin
@@ -77,6 +92,11 @@ jobs:
       - name: Build
         working-directory: ContentProviderPagingKotlin
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ContentProviderPagingKotlin-build
+          path: ContentProviderPagingKotlin/app/build/outputs/
 
   FileManager:
     name: FileManager
@@ -91,6 +111,11 @@ jobs:
       - name: Build
         working-directory: FileManager
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FileManager-build
+          path: FileManager/app/build/outputs/
 
   FileProvider:
     name: FileProvider
@@ -105,6 +130,11 @@ jobs:
       - name: Build
         working-directory: FileProvider
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FileProvider-build
+          path: FileProvider/app/build/outputs/
 
   MediaStore:
     name: MediaStore
@@ -119,6 +149,11 @@ jobs:
       - name: Build
         working-directory: MediaStore
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: MediaStore-build
+          path: MediaStore/app/build/outputs/
 
   SafDemos:
     name: SafDemos
@@ -133,6 +168,11 @@ jobs:
       - name: Build
         working-directory: SafDemos
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: SafDemos-build
+          path: SafDemos/app/build/outputs/
 
   ScopedStorage:
     name: ScopedStorage
@@ -147,6 +187,11 @@ jobs:
       - name: Build
         working-directory: ScopedStorage
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ScopedStorage-build
+          path: ScopedStorage/app/build/outputs/
 
   SharingShortcuts:
     name: SharingShortcuts
@@ -161,6 +206,11 @@ jobs:
       - name: Build
         working-directory: SharingShortcuts
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: SharingShortcuts-build
+          path: SharingShortcuts/Application/build/outputs/
 
   StorageClient:
     name: StorageClient
@@ -175,6 +225,11 @@ jobs:
       - name: Build
         working-directory: StorageClient
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: StorageClient-build
+          path: StorageClient/Application/build/outputs/
 
   StorageProvider:
     name: StorageProvider
@@ -189,3 +244,8 @@ jobs:
       - name: Build
         working-directory: StorageProvider
         run: ./gradlew assembleDebug
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: StorageProvider-build
+          path: StorageProvider/Application/build/outputs/
