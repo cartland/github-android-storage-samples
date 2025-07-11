@@ -22,11 +22,9 @@ on:
     branches: [ main ]
 
 jobs:
-
-  build:
-    name: Build
+  ActionOpenDocument:
+    name: ActionOpenDocument
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: set up JDK 11
@@ -34,12 +32,160 @@ jobs:
         with:
           distribution: 'zulu'
           java-version: 11
-      - name: Build project
-        run: .github/scripts/gradlew_recursive.sh assembleDebug
-      - name: Zip artifacts
-        run: zip -r assemble.zip . -i '**/build/*.apk' '**/build/*.aab' '**/build/*.aar' '**/build/*.so'
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
+      - name: Build
+        working-directory: ActionOpenDocument
+        run: ./gradlew assembleDebug
+
+  ActionOpenDocumentTree:
+    name: ActionOpenDocumentTree
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
         with:
-          name: assemble
-          path: assemble.zip
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: ActionOpenDocumentTree
+        run: ./gradlew assembleDebug
+
+  ContentProviderPaging:
+    name: ContentProviderPaging
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: ContentProviderPaging
+        run: ./gradlew assembleDebug
+
+  ContentProviderPagingKotlin:
+    name: ContentProviderPagingKotlin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: ContentProviderPagingKotlin
+        run: ./gradlew assembleDebug
+
+  FileManager:
+    name: FileManager
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: FileManager
+        run: ./gradlew assembleDebug
+
+  FileProvider:
+    name: FileProvider
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: FileProvider
+        run: ./gradlew assembleDebug
+
+  MediaStore:
+    name: MediaStore
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: MediaStore
+        run: ./gradlew assembleDebug
+
+  SafDemos:
+    name: SafDemos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: SafDemos
+        run: ./gradlew assembleDebug
+
+  ScopedStorage:
+    name: ScopedStorage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: ScopedStorage
+        run: ./gradlew assembleDebug
+
+  SharingShortcuts:
+    name: SharingShortcuts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: SharingShortcuts
+        run: ./gradlew assembleDebug
+
+  StorageClient:
+    name: StorageClient
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: StorageClient
+        run: ./gradlew assembleDebug
+
+  StorageProvider:
+    name: StorageProvider
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Build
+        working-directory: StorageProvider
+        run: ./gradlew assembleDebug
