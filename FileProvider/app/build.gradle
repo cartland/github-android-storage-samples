@@ -54,6 +54,7 @@ android {
         resValues = false
         shaders = false
     }
+    namespace 'com.example.graygallery'
 }
 
 dependencies {
