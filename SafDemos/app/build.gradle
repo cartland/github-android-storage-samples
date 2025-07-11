@@ -45,6 +45,7 @@ android {
     viewBinding {
         enabled = true
     }
+    namespace 'com.android.samples.safdemos'
 }
 
 dependencies {
